@@ -10,8 +10,8 @@
 
   <br />
   <a href="https://haddis-prompt.vercel.app" target="_blank">🌐 Live Demo</a> | 
-  <a href="https://youtube.com/@haddis-tech" target="_blank">📺 YouTube</a> | 
-  <a href="https://tiktok.com/@bemne16" target="_blank">🎵 TikTok</a>
+  <a href="https://youtube.com/@haddis-tech" target="_blank">📺 My YouTube Channel</a> | 
+  <a href="https://tiktok.com/@bemne16" target="_blank">🎵 My TikTok Page</a>
   <br />
 </div>
 
