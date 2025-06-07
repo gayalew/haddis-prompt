@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "@*": ["./*"]
+      "@*": ["./*"],
+      "@models/*": ["./models/*"],
+      "@utils/*": ["./utils/*"]
     }
   }
 }

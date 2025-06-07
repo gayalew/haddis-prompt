@@ -12,21 +12,31 @@ const UserProfile = ({ params }) => {
   const [userPosts, setUserPosts] = useState([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchUserPosts = async () => {
       const response = await fetch(`/api/users/${params?.id}/posts`);
       const data = await response.json();
 
+      if (!response.ok) {
+        console.error("Failed to fetch user posts:", data);
+        return;
+      }
       setUserPosts(data);
     };
 
-    if (params?.id) fetchPosts();
-  }, [params.id]);
+    if (params?.id) fetchUserPosts();
+  }, [userName]);
+
+  if (!userName) {
+    return <div>No user found</div>;
+  }
 
   return (
     <Profile
       name={userName}
-      desc={`Welcome to ${userName}'s personalized profile page. Explore ${userName}'s exceptional prompts and be inspired by the power of their imagination`}
+      desc={`Welcome to ${userName}'s profile page. Explore ${userName}'s posts and contributions.`}
       data={userPosts}
+      handleEdit={() => {}}
+      handleDelete={() => {}}
     />
   );
 };
